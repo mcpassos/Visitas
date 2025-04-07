@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Roteiro de Visitas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <img src="supra_logo.jpeg" alt="Logo Supra" height="60">
+        <h1>Roteiro de Visitas</h1>
+        <div id="periodo">
+            <button id="dia" aria-label="Filtrar eventos do dia">DIA</button>
+            <button id="semana" aria-label="Filtrar eventos da semana">SEMANA</button>
+            <button id="mes" aria-label="Filtrar eventos do mês">MÊS</button>
+        </div>
+        <div id="dataHora" aria-live="polite"></div>
+    </header>
+    <main>
+        <div id="calendario"></div>
+        <div id="detalhesEvento" class="modal" role="dialog" aria-hidden="true">
+            <div class="modal-conteudo">
+                <button class="fechar-modal" aria-label="Fechar">&times;</button>
+                <h2 id="tituloEvento"></h2>
+                <p id="horarioEvento"></p>
+                <p id="localEvento"></p>
+                <p id="descricaoEvento"></p>
+                <p id="enderecoEvento"></p>
+                <button id="acaoEvento" class="botao-acao">Ação</button>
+            </div>
+        </div>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>
